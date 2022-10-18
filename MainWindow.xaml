@@ -6,30 +6,48 @@
         xmlns:local="clr-namespace:Tema3_VisorImagenes"
         mc:Ignorable="d"
         Title="Alteracion Imagenes" MinHeight="710" Height="710" MinWidth="890" Width="890" Icon="/assets/editImages.ico">
+    
+    <Window.Resources>
+        <Style TargetType="{x:Type Image}">
+            <Setter Property="Width" Value="170"/>
+            <Setter Property="Source" Value="/assets/episodioIV.jpg"/>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="piePágina">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontFamily" Value="Rubik"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="10"/>
+        </Style>
+    </Window.Resources>
+    
     <DockPanel>
         <DockPanel Background="LightBlue" DockPanel.Dock="Bottom" Margin="5,10,5,5" Height="60" LastChildFill="False">
-            <TextBlock FontSize="20" FontFamily="Rubik" DockPanel.Dock="Left" VerticalAlignment="Center" Padding="10">Nº de imágenes: 10</TextBlock>
-            <TextBlock FontSize="20" FontFamily="Rubik" DockPanel.Dock="Right" VerticalAlignment="Center" Padding="10">Diseñado por Carles Rosell</TextBlock>
+            <TextBlock DockPanel.Dock="Left" Style="{StaticResource piePágina}">Nº de imágenes: 10</TextBlock>
+            <TextBlock DockPanel.Dock="Right" Style="{StaticResource piePágina}">Diseñado por Carles Rosell</TextBlock>
         </DockPanel>
         <Border Background="LightGreen" BorderBrush="Black" BorderThickness="3" CornerRadius="4" DockPanel.Dock="Right" Padding="5" Margin="12">
             <DockPanel LastChildFill="False">
-                <Button Margin="0,0,0,10" FontSize="16" DockPanel.Dock="Top">Añadir imagen</Button>
-                <Button Margin="0,0,0,10" FontSize="16" DockPanel.Dock="Top">Eliminar imagen</Button>
-                <Button FontSize="16" DockPanel.Dock="Top">Eliminar todas</Button>
-                <Button FontSize="16" DockPanel.Dock="Bottom">Rotar</Button>
-                <Button FontSize="16" Margin="0,0,0,10" DockPanel.Dock="Bottom">Recortar</Button>
+                <Button DockPanel.Dock="Top">Añadir imagen</Button>
+                <Button DockPanel.Dock="Top">Eliminar imagen</Button>
+                <Button DockPanel.Dock="Top">Eliminar todas</Button>
+                <Button DockPanel.Dock="Bottom">Rotar</Button>
+                <Button DockPanel.Dock="Bottom">Recortar</Button>
             </DockPanel>
         </Border>
         <TextBlock DockPanel.Dock="Top" FontSize="40" HorizontalAlignment="Center" Margin="0,12,0,12">Visor de imágenes</TextBlock>
         <WrapPanel>
-            <Image Source="/assets/episodioIV.jpg" Width="170"></Image>
-            <Image Source="/assets/episodioIV.jpg" Width="170"></Image>
-            <Image Source="/assets/episodioIV.jpg" Width="170"></Image>
-            <Image Source="/assets/episodioIV.jpg" Width="170"></Image>
-            <Image Source="/assets/episodioIV.jpg" Width="170"></Image>
-            <Image Source="/assets/episodioIV.jpg" Width="170"></Image>
-            <Image Source="/assets/episodioIV.jpg" Width="170"></Image>
-            <Image Source="/assets/episodioIV.jpg" Width="170"></Image>
+            <Image></Image>
+            <Image></Image>
+            <Image></Image>
+            <Image></Image>
+            <Image></Image>
+            <Image></Image>
+            <Image></Image>
+            <Image></Image>
         </WrapPanel>
     </DockPanel>
 </Window>
